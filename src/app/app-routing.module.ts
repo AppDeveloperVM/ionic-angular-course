@@ -3,15 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'recipes', pathMatch: 'full' },
-  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthPageModule)},
-  { path: 'places', loadChildren: () => import('./places/places.module').then( m => m.PlacesPageModule)},
-  { path: 'discover', loadChildren: () => import('./places/discover/discover.module').then( m => m.DiscoverPageModule)},
-  { path: 'offers', loadChildren: () => import('./places/offers/offers.module').then( m => m.OffersPageModule)},
-  { path: 'new-offer', loadChildren: () => import('./places/offers/new-offer/new-offer.module').then( m => m.NewOfferPageModule)},
-  { path: 'edit-offer', loadChildren: () => import('./places/offers/edit-offer/edit-offer.module').then( m => m.EditOfferPageModule)},
-  { path: 'place-detail', loadChildren: () => import('./places/discover/place-detail/place-detail.module').then( m => m.PlaceDetailPageModule)},
-  { path: 'offer-bookings', loadChildren: () => import('./places/offers/offer-bookings/offer-bookings.module').then( m => m.OfferBookingsPageModule)},
-  { path: 'bookings', loadChildren: () => import('./bookings/bookings.module').then( m => m.BookingsPageModule)},
+  { path: 'auth', loadChildren: './auth/auth.module#.AuthPageModule'},
+  { path: 'places', loadChildren: './places/places.module#.PlacesPageModule'},
+  { path: 'discover', loadChildren: './places/discover/discover.module#.DiscoverPageModule'},
+  { path: 'offers', loadChildren: './places/offers/offers.module#OffersPageModule'},
+  { path: 'new-offer', loadChildren: './places/offers/new-offer/new-offer.module#.NewOfferPageModule'},
+  { path: 'edit-offer', loadChildren: './places/offers/edit-offer/edit-offer.module#.EditOfferPageModule'},
+  { path: 'place-detail', loadChildren: './places/discover/place-detail/place-detail.module#.PlaceDetailPageModule'},
+  { path: 'offer-bookings', loadChildren: './places/offers/offer-bookings/offer-bookings.module#.OfferBookingsPageModule'},
+  { path: 'bookings', loadChildren: './bookings/bookings.module#.BookingsPageModule'},
 
 ];
 
