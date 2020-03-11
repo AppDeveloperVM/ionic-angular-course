@@ -9,6 +9,10 @@ const routes: Routes = [
     component: PlacesPage
   },
   {
+    path: 'tabs',
+    component: PlacesPage
+  },
+  {
     path: 'discover',
     loadChildren: () => import('./discover/discover.module').then( m => m.DiscoverPageModule)
   },
