@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Place } from './place.model'
+import { Place } from './place.model';
 
 @Injectable({
   providedIn: 'root'
@@ -34,4 +34,9 @@ export class PlacesService {
   }
 
   constructor() { }
+
+
+  getPlace(id: string) {
+    return {...this._places.find(p => p.id === id)}; // "{...  }" will clone the object
+  }
 }
